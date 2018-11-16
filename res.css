@@ -640,7 +640,7 @@ payPassword-box .clearfix:before, payPassword-box .clearfix:after {
     color:#464a4d;
 }
 .payPassword-box .sub-btn {
-    position:absolute;
+    position:fixed;
     left:50%;
     margin-left:-139px;
     bottom:25px;
