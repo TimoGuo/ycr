@@ -1,23 +1,25 @@
 
-$(function () {
-    var st = true;
-    $('#buyA').click(function () {
-        alert('buy-btn');
-        if(st){
-            inputShow();st = false;
-        }else{
-            $('.buy-btn a').unbind("click",inputShow);
-        }
+(function($){
+    $(function(){
+        var st = true;
+        $('#buyA').click(function () {
+            alert('buy-btn');
+            if(st){
+                inputShow();st = false;
+            }else{
+                $('.buy-btn a').unbind("click",inputShow);
+            }
+        });
+
+        $('#buyB').click(function () {
+            alert('buy11');
+        });
+
+        $('#buyC').click(function () {
+            alert('buyCCC');
+        });
     });
-    
-    $('#buyB').click(function () {
-        alert('buy11');
-    });
-    
-    $('#buyC').click(function () {
-        alert('buyCCC');
-    });
-})
+})(jQuery);
 
 function inputShow() {
     $(this).css('opacity', '0.8');
