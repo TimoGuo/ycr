@@ -61,7 +61,7 @@ geoc.getLocation(point, function(rs){
 //立即购买
 
 var st = true;
-$('.buy-btn a').click(function () {
+$('#buyA').click(function () {
     alert('buy-btn');
     if(st){
         inputShow();st = false;
@@ -75,7 +75,7 @@ function inputShow() {
     $('#pcode').val('');
 }
 
-$('.buy11 a').click(function () {
+$('#buyB').click(function () {
     alert('buy11');
 });
 
