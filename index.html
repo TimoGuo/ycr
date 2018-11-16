@@ -15,191 +15,202 @@
     <title>利链分享</title>
     <link href="res.css" rel="stylesheet">
 </head>
-    <div class="buy-btn">
-        <a href="javascript:;">立即购买</a>
-    </div>
-<div class="share" style="cursor:pointer">
-   <!--<div class="share-bg"></div>-->
-    <img src="share-logo.png" alt="" class="logo" style="width:55%;">
-    <img src="hy-rec.png" alt="" class="hy-rec">
-     
-    <div class="info">
-        <!--正在拍卖-->
-        <!--<img src="/assets/img/state-1.png" alt="" class="status">-->
-
-        <div class="shop">
-            <div class="left"><img src="share-logo.png" alt=""></div>
-            <div class="right"></div>
+<body>
+    <div class="share" style="cursor:pointer">
+        <!--<div class="share-bg"></div>-->
+        <img src="share-logo.png" alt="" class="logo" style="width:55%;">
+        <img src="hy-rec.png" alt="" class="hy-rec">
+    
+        <div class="buy-btn">
+            <a href="javascript:;">立即购买</a>
         </div>
-
-        <div class="bot">
-            <div class="title">
-               	${name}
-                <!--运费{freight}-->
-               	<!--${sign}-->
+    
+        <div class="info">
+            <!--正在拍卖-->
+            <!--<img src="/assets/img/state-1.png" alt="" class="status">-->
+    
+            <div class="shop">
+                <div class="left"><img src="share-logo.png" alt=""></div>
+                <div class="right"></div>
             </div>
-            <div class="money">￥${price}</div>
-            <!--<div class="jieshu"><i class="fa fa-hourglass-half"></i> 距离结束:-->
+    
+            <div class="bot">
+                <div class="title">
+                    ${name}
+                    <!--运费{freight}-->
+                    <!--${sign}-->
+                </div>
+                <div class="money">￥${price}</div>
+                <!--<div class="jieshu"><i class="fa fa-hourglass-half"></i> 距离结束:-->
                 <!--<ul class="countdown clearfix d-time">-->
-                    <!--<li><span class="days">00</span></li>-->
-                    <!--<li class="seperator">天</li>-->
-                    <!--<li><span class="hours">00</span></li>-->
-                    <!--<li class="seperator">时</li>-->
-                    <!--<li><span class="minutes">00</span></li>-->
-                    <!--<li class="seperator">分</li>-->
-                    <!--<li><span class="seconds">00</span></li>-->
-                    <!--<li class="seperator">秒</li>-->
+                <!--<li><span class="days">00</span></li>-->
+                <!--<li class="seperator">天</li>-->
+                <!--<li><span class="hours">00</span></li>-->
+                <!--<li class="seperator">时</li>-->
+                <!--<li><span class="minutes">00</span></li>-->
+                <!--<li class="seperator">分</li>-->
+                <!--<li><span class="seconds">00</span></li>-->
+                <!--<li class="seperator">秒</li>-->
                 <!--</ul>-->
-            <!--</div>-->
-            <div class="add-user ">
-                <div class="add" style="width:80%; overflow:hidden;text-overflow:ellipsis;white-space:nowrap"><i class="fa fa-map-marker-alt"></i> <span id="result"></span></div>
-                <div class="users"><i class="fa fa-users"></i> ${clicks}</div>
-                <div id="allmap" style=""></div>
-            </div>
-            <!--<div class="buy-btn">-->
+                <!--</div>-->
+                <div class="add-user ">
+                    <div class="add" style="width:80%; overflow:hidden;text-overflow:ellipsis;white-space:nowrap"><i
+                            class="fa fa-map-marker-alt"></i> <span id="result"></span></div>
+                    <div class="users"><i class="fa fa-users"></i> ${clicks}</div>
+                    <div id="allmap" style=""></div>
+                </div>
+                <!--<div class="buy-btn">-->
                 <!--<a href="javascript:;">立即购买</a>-->
-            <!--</div>-->
+                <!--</div>-->
+            </div>
         </div>
-    </div>
-
-    <!--手机-验证码-->
-    <div class="mess-box" style="display:none">
-        <div class="ph">
-            <input type="text" placeholder="输入您的手机号" id="userPhone" name="userPhone" maxlength="11">
-            <em></em>
+    
+        <!--手机-验证码-->
+        <div class="mess-box" style="display:none">
+            <div class="ph">
+                <input type="text" placeholder="输入您的手机号" id="userPhone" name="userPhone" maxlength="11">
+                <em></em>
+            </div>
+            <div class="inp" style="border:none;">
+                <input type="text" placeholder="输入验证码" maxlength="6" id="pcode" name="pcode"
+                       onkeyup="this.value=this.value.replace(/[^\d]/g,'');">
+                <input type="button" value="获取验证码" id="getPcode">
+            </div>
+    
+            <input type="button" value="提交" id="next-page">
         </div>
-        <div class="inp" style="border:none;">
-            <input type="text" placeholder="输入验证码" maxlength="6" id="pcode" name="pcode" onkeyup="this.value=this.value.replace(/[^\d]/g,'');">
-            <input type="button" value="获取验证码" id="getPcode">
-        </div>
-
-        <input type="button" value="提交" id="next-page">
-    </div>
-
-    <div class="operate-box" style="display:none">
-        <!--收货地址-->
-        <div class="address-box" >
-            <h3>收货地址</h3>
-            <div class="history">
-                <ul>
-                    <!--<li>-->
+    
+        <div class="operate-box" style="display:none">
+            <!--收货地址-->
+            <div class="address-box">
+                <h3>收货地址</h3>
+                <div class="history">
+                    <ul>
+                        <!--<li>-->
                         <!--<div>-->
-                            <!--<input class="pu name" type="text" value="答案都是" disabled>-->
-                            <!--<input class="pu tel" type="text" value="回复" disabled>-->
+                        <!--<input class="pu name" type="text" value="答案都是" disabled>-->
+                        <!--<input class="pu tel" type="text" value="回复" disabled>-->
                         <!--</div>-->
                         <!--<div class="form-inline">-->
-                            <!--<div data-toggle="distpicker">-->
-                                <!--<div class="form-group">-->
-                                    <!--<select class="form-control province3"  data-province="浙江省" disabled></select>-->
-                                <!--</div>-->
-                                <!--<div class="form-group">-->
-                                    <!--<select class="form-control city3"  data-city="杭州市" disabled></select>-->
-                                <!--</div>-->
-                                <!--<div class="form-group">-->
-                                    <!--<select class="form-control district3" data-district="西湖区" disabled></select>-->
-                                <!--</div>-->
-                            <!--</div>-->
+                        <!--<div data-toggle="distpicker">-->
+                        <!--<div class="form-group">-->
+                        <!--<select class="form-control province3"  data-province="浙江省" disabled></select>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<select class="form-control city3"  data-city="杭州市" disabled></select>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<select class="form-control district3" data-district="西湖区" disabled></select>-->
+                        <!--</div>-->
+                        <!--</div>-->
                         <!--</div>-->
                         <!--<input class="de" type="text" value="fghsfh" disabled>-->
                         <!--<em class="edit">编辑</em>-->
                         <!--<em class="okEdit" data-id="" style="display:none;">确认</em>-->
-                    <!--</li>-->
-                </ul>
-                <p class="add-btn"><span onclick="addBtn()">+添加新地址</span></p>
-            </div>
-            <div class="add equally" style="display:none">
-                <p><label><span>姓名</span><input class="newName" type="text" placeholder="请输入您的姓名"></label></p>
-                <p><label><span>手机号码</span><input class="newTel" type="text" placeholder="请输入您的手机号码" maxlength="11"></label></p>
-                <div class="form-inline">
-                    <div id="distpicker5">
-                        <div class="form-group">
-                            <label><span>选择省</span><select class="form-control" id="province10" data-province="—— 省 ——"></select></label>
-                        </div>
-                        <div class="form-group">
-                            <label><span>选择市</span><select class="form-control" id="city10" data-city="—— 市 ——"></select></label>
-                        </div>
-                        <div class="form-group">
-                            <label><span>选择区</span><select class="form-control" id="district10" data-district="—— 区 ——"></select></label>
+                        <!--</li>-->
+                    </ul>
+                    <p class="add-btn"><span onclick="addBtn()">+添加新地址</span></p>
+                </div>
+                <div class="add equally" style="display:none">
+                    <p><label><span>姓名</span><input class="newName" type="text" placeholder="请输入您的姓名"></label></p>
+                    <p><label><span>手机号码</span><input class="newTel" type="text" placeholder="请输入您的手机号码"
+                                                      maxlength="11"></label></p>
+                    <div class="form-inline">
+                        <div id="distpicker5">
+                            <div class="form-group">
+                                <label><span>选择省</span><select class="form-control" id="province10"
+                                                               data-province="—— 省 ——"></select></label>
+                            </div>
+                            <div class="form-group">
+                                <label><span>选择市</span><select class="form-control" id="city10"
+                                                               data-city="—— 市 ——"></select></label>
+                            </div>
+                            <div class="form-group">
+                                <label><span>选择区</span><select class="form-control" id="district10"
+                                                               data-district="—— 区 ——"></select></label>
+                            </div>
                         </div>
                     </div>
+                    <p><label><span>详细地址</span><input class="newAdd" type="text" placeholder="请输入您的收货地址"></label></p>
+                    <input type="button" value="提交" id="new-address">
                 </div>
-                <p><label><span>详细地址</span><input class="newAdd" type="text" placeholder="请输入您的收货地址"></label></p>
-                <input type="button" value="提交" id="new-address">
+    
             </div>
-
-        </div>
-
-        <!--支付方式-->
-        <div class="payment-box">
-            <label><input type="radio" name="radio" value="1" checked>支付宝</label>
-            <label><input type="radio" name="radio" value="2" checked>微信</label>
-            <!--<label><input type="radio" name="radio" value="3">零钱</label>-->
-            <label><input type="radio" name="radio" value="4">钱包支付</label>
-        </div>
+    
+            <!--支付方式-->
+            <div class="payment-box">
+                <label><input type="radio" name="radio" value="1" checked>支付宝</label>
+                <label><input type="radio" name="radio" value="2" checked>微信</label>
+                <!--<label><input type="radio" name="radio" value="3">零钱</label>-->
+                <label><input type="radio" name="radio" value="4">钱包支付</label>
+            </div>
             <!--确认支付-->
-        <input id="paymentBtn" onclick="payment()" type="button" value="确认支付">
-    </div>
-
-    <!--<img src="/assets/img/d-app.png" alt="" class="d-app">-->
-
-    <!--支付密码弹框-->
-    <div class="maskk" style="display:none;"></div>
-    <!--<form action="" method="post" name="payPassword" id="form_paypsw" class="payPassword-box" style="display:;">-->
-    <form id="form_paypsw" class="payPassword-box" style="display:none;">
-        <div class="clearfix tit-tip">
-            <h3 class="fl">确认付款</h3>
-            <img class="fr pay-close" src="/assets/img/error.png" alt="">
+            <input id="paymentBtn" onclick="payment()" type="button" value="确认支付">
         </div>
-        <h1>￥<em>${price}</em></h1>
-        <p class="dibs clearfix">
-            <span class="fl">零钱</span>
-            <span class="fr">￥50</span>
-        </p>
-        <div id="payPassword_container" class="alieditContainer clearfix" data-busy="0">
-            <div data-error="i_error">
-                <div class="six-password">
-                    <input class="i-text sixDigitPassword" id="payPassword_rsainput" type="password" autocomplete="off"
-                           required="required" value="" name="payPassword_rsainput" data-role="sixDigitPassword" tabindex=""
-                           maxlength="6" minlength="6" aria-required="true">
-                    <div tabindex="0" class="sixDigitPassword-box">
-                        <i class=""><b></b></i>
-                        <i><b></b></i>
-                        <i><b></b></i>
-                        <i><b></b></i>
-                        <i><b></b></i>
-                        <i><b></b></i>
-                        <span style="width:46px; left: 0px; visibility: hidden;" id="cardwrap" data-role="cardwrap"></span>
+    
+        <!--<img src="/assets/img/d-app.png" alt="" class="d-app">-->
+    
+        <!--支付密码弹框-->
+        <div class="maskk" style="display:none;"></div>
+        <!--<form action="" method="post" name="payPassword" id="form_paypsw" class="payPassword-box" style="display:;">-->
+        <form id="form_paypsw" class="payPassword-box" style="display:none;">
+            <div class="clearfix tit-tip">
+                <h3 class="fl">确认付款</h3>
+                <img class="fr pay-close" src="/assets/img/error.png" alt="">
+            </div>
+            <h1>￥<em>${price}</em></h1>
+            <p class="dibs clearfix">
+                <span class="fl">零钱</span>
+                <span class="fr">￥50</span>
+            </p>
+            <div id="payPassword_container" class="alieditContainer clearfix" data-busy="0">
+                <div data-error="i_error">
+                    <div class="six-password">
+                        <input class="i-text sixDigitPassword" id="payPassword_rsainput" type="password" autocomplete="off"
+                               required="required" value="" name="payPassword_rsainput" data-role="sixDigitPassword"
+                               tabindex=""
+                               maxlength="6" minlength="6" aria-required="true">
+                        <div tabindex="0" class="sixDigitPassword-box">
+                            <i class=""><b></b></i>
+                            <i><b></b></i>
+                            <i><b></b></i>
+                            <i><b></b></i>
+                            <i><b></b></i>
+                            <i><b></b></i>
+                            <span style="width:46px; left: 0px; visibility: hidden;" id="cardwrap"
+                                  data-role="cardwrap"></span>
+                        </div>
                     </div>
                 </div>
             </div>
+            <input class="sub-btn" type="button" value="确认">
+        </form>
+    
+        <!--弹窗-->
+        <div class="mask2" style="display:none;"></div>
+        <div class="stepTip-box" style="display:none">
+            <div class="main-info">
+                <ul>
+                    <li>请确认微信支付是否已完成</li>
+                    <li class="red">已完成支付</li>
+                    <li class="gray">支付遇到问题，重新支付</li>
+                </ul>
+            </div>
         </div>
-        <input class="sub-btn" type="button" value="确认">
-    </form>
-
-    <!--弹窗-->
-    <div class="mask2" style="display:none;"></div>
-    <div class="stepTip-box" style="display:none">
-        <div class="main-info">
-            <ul>
-                <li>请确认微信支付是否已完成</li>
-                <li class="red">已完成支付</li>
-                <li class="gray">支付遇到问题，重新支付</li>
-            </ul>
-        </div>
+    
+        <!--倒计时-->
+        <div id="times" style="display:none">${endtime}</div>
+        <!--金纬度-->
+        <input type="hidden" id="datAdd" value="${coordinate}"/>
+        <input id="urlId" type="hidden" value="${shareResourceUrlId}">
+        <input type="hidden" id="sign" value="${sign}"/>
+        <input type="hidden" id="imgList" value="${img}"/>
+        <input type="hidden" id="available" value="0.00"/>
+        <input type="hidden" id="money" value="0.00"/>
+        <input id="shareResourceUrlId" value="${shareResourceUrlId}" style="display:none;">
+    
     </div>
-
-    <!--倒计时-->
-    <div id="times" style="display:none">${endtime}</div>
-    <!--金纬度-->
-    <input type="hidden" id="datAdd" value="${coordinate}"/>
-    <input id="urlId" type="hidden" value="${shareResourceUrlId}">
-    <input type="hidden" id="sign" value="${sign}"/>
-    <input type="hidden" id="imgList" value="${img}"/>
-    <input type="hidden" id="available" value="0.00"/>
-    <input type="hidden" id="money" value="0.00"/>
-    <input id="shareResourceUrlId" value="${shareResourceUrlId}" style="display:none;">
-
-</div>
+</body>
 
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MWVa7mSwqsuPQZlsGaYq7x5cqxey7lOX"></script>
 <script src="http://p5tjk0tis.bkt.clouddn.com/iBox/iBox.js"></script>
@@ -216,31 +227,31 @@
     //     autoSelect: false
     // });
 
-    function pay(){
-        var token=$("#token").val();
-        var reqData=$("#reqData").val();
+    function pay() {
+        var token = $("#token").val();
+        var reqData = $("#reqData").val();
         //选择的收货地址ID,页面选择收货的ID
-        var rtid=1;
-   //     var sign="C2A7E24435FFBA0E8CE4773F9859D54CA919360F9212213703E12FEB13090874";//资源信息 加密信息
-   //     var token="E0145A26BBC40D874905B2ACE37633BC7C937B01876B2621FCBE8F53816606FDC4D9874E13C402F6";//登录信息
+        var rtid = 1;
+        //     var sign="C2A7E24435FFBA0E8CE4773F9859D54CA919360F9212213703E12FEB13090874";//资源信息 加密信息
+        //     var token="E0145A26BBC40D874905B2ACE37633BC7C937B01876B2621FCBE8F53816606FDC4D9874E13C402F6";//登录信息
         //选择的支付方式
-        var payWay=1;//1:支付宝 2：微信 3：零钱 4：钱包支付
+        var payWay = 1;//1:支付宝 2：微信 3：零钱 4：钱包支付
         $.ajax({
             type: 'POST',
             url: "/order/wappay.do",
-            data:{payWay:payWay,rtid:rtid,token:token,sign:sign},
+            data: {payWay: payWay, rtid: rtid, token: token, sign: sign},
             dataType: 'json',
-            success: function(data) {
-                if(data.success){
-                    var form=$(data.form);
+            success: function (data) {
+                if (data.success) {
+                    var form = $(data.form);
                     $(document.body).append(form);
                     // // 提交表单
                     form.submit();
-                }else {
+                } else {
                     alert(data.msg);
                 }
             },
-            error: function() {
+            error: function () {
                 alert("网络繁忙，请重试");
             }
         });
