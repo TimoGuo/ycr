@@ -48,16 +48,16 @@
         }
         bdGEO();*/
 
-        var add = $('#datAdd').val();
-        var map = new BMap.Map("allmap");
-        var point = new BMap.Point(add.split('.')[0], add.split(',')[1]);
-        map.centerAndZoom(point,12);
-        var geoc = new BMap.Geocoder();
-        geoc.getLocation(point, function(rs){
-            var addComp = rs.addressComponents;
-           // alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
-            document.getElementById("result").innerHTML += addComp.city + ", " + addComp.district;
-        });
+//         var add = $('#datAdd').val();
+//         var map = new BMap.Map("allmap");
+//         var point = new BMap.Point(add.split('.')[0], add.split(',')[1]);
+//         map.centerAndZoom(point,12);
+//         var geoc = new BMap.Geocoder();
+//         geoc.getLocation(point, function(rs){
+//             var addComp = rs.addressComponents;
+//            // alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+//             document.getElementById("result").innerHTML += addComp.city + ", " + addComp.district;
+//         });
 
 
         //立即购买
