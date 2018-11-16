@@ -62,7 +62,7 @@ geoc.getLocation(point, function(rs){
 
 var st = true;
 $('.buy-btn a').click(function () {
-    alert('1111');
+    alert('buy-btn');
     if(st){
         inputShow();st = false;
     }else{
@@ -74,6 +74,10 @@ function inputShow() {
     $(".mess-box").fadeIn();
     $('#pcode').val('');
 }
+
+$('.buy11 a').click(function () {
+    alert('buy11');
+});
 
 var wait = 60;
 var urlId = $("#urlId").val().trim();
