@@ -73,6 +73,10 @@ $(function () {
     $('#buyB').click(function () {
         alert('buy11');
     });
+    
+    $('#buyC').click(function () {
+        alert('buyCCC');
+    });
 })
 
 function inputShow() {
