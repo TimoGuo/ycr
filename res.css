@@ -1,4 +1,5 @@
 /* 资源首页 S */
+input[type=button], input[type=submit], input[type=file], button { cursor:pointer; -webkit-appearance:none; }
 .res-index {
 
 }
