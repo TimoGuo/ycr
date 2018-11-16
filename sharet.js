@@ -59,25 +59,28 @@ geoc.getLocation(point, function(rs){
 });
 
 //立即购买
+$(function () {
+    var st = true;
+    $('#buyA').click(function () {
+        alert('buy-btn');
+        if(st){
+            inputShow();st = false;
+        }else{
+            $('.buy-btn a').unbind("click",inputShow);
+        }
+    });
+    
+    $('#buyB').click(function () {
+        alert('buy11');
+    });
+})
 
-var st = true;
-$('#buyA').click(function () {
-    alert('buy-btn');
-    if(st){
-        inputShow();st = false;
-    }else{
-        $('.buy-btn a').unbind("click",inputShow);
-    }
-});
 function inputShow() {
     $(this).css('opacity', '0.8');
     $(".mess-box").fadeIn();
     $('#pcode').val('');
 }
 
-$('#buyB').click(function () {
-    alert('buy11');
-});
 
 var wait = 60;
 var urlId = $("#urlId").val().trim();
