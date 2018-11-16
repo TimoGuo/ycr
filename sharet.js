@@ -11,7 +11,9 @@
 //         });
 
         //轮播图片
-        var imgList = $("#imgList").val().split(",");
+//         var imgList = $("#imgList").val().split(",");
+var imgList = ['http://pic8.nipic.com/20100719/3320946_123936081858_2.jpg',
+               'http://img3.redocn.com/tupian/20150106/aixinxiangkuang_3797284.jpg']
         for (var i = 0; i < imgList.length; i++) {
             $('.shop .left img').attr('src', imgList[0]);
             $('.shop .right').append('<div><img class="banner" src="' + imgList[i] + '" alt=""></div>')
