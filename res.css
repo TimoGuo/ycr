@@ -414,11 +414,11 @@
     clear:both;
     visibility:hidden;
 }
-.share .info .bot .buy-btn {
+.buy-btn {
     overflow:hidden;
     margin-top:10px;
 }
-.share .info .bot .buy-btn a {
+.buy-btn a {
     float: right;
     font-size:14px;
     color:#fff;
