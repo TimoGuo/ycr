@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/assets/css/animate.min.css">
     <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="/assets/css/times.css">
-    <script src="http://static.solaridc.com/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
     <title>利链分享</title>
     <link href="res.css" rel="stylesheet">
 </head>
@@ -26,7 +25,7 @@
     </div>
     <a id="buyC" style="cursor:pointer" href="javascript:;">222CC</a>
     
-
+<script src="http://static.solaridc.com/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MWVa7mSwqsuPQZlsGaYq7x5cqxey7lOX"></script>
 <script src="http://p5tjk0tis.bkt.clouddn.com/iBox/iBox.js"></script>
 <!--地址-->
@@ -35,6 +34,7 @@
 
 <script src="/assets/js/timeDownCount.js"></script>
 <script src="/assets/js/jquery-validate.js"></script>
+    
 <script type="text/javascript" src="sharet.js"></script>
 
 <script>
@@ -42,35 +42,7 @@
     //     autoSelect: false
     // });
 
-    function pay() {
-        var token = $("#token").val();
-        var reqData = $("#reqData").val();
-        //选择的收货地址ID,页面选择收货的ID
-        var rtid = 1;
-        //     var sign="C2A7E24435FFBA0E8CE4773F9859D54CA919360F9212213703E12FEB13090874";//资源信息 加密信息
-        //     var token="E0145A26BBC40D874905B2ACE37633BC7C937B01876B2621FCBE8F53816606FDC4D9874E13C402F6";//登录信息
-        //选择的支付方式
-        var payWay = 1;//1:支付宝 2：微信 3：零钱 4：钱包支付
-        $.ajax({
-            type: 'POST',
-            url: "/order/wappay.do",
-            data: {payWay: payWay, rtid: rtid, token: token, sign: sign},
-            dataType: 'json',
-            success: function (data) {
-                if (data.success) {
-                    var form = $(data.form);
-                    $(document.body).append(form);
-                    // // 提交表单
-                    form.submit();
-                } else {
-                    alert(data.msg);
-                }
-            },
-            error: function () {
-                alert("网络繁忙，请重试");
-            }
-        });
-    }
+ 
 </script>
 </body>
 </html>
