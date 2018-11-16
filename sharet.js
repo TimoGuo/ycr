@@ -583,6 +583,7 @@ $('.maskk,.pay-close').click(function () {
 //
 
 $('.mask2').click(function () {
+   alert('mask2');
    $('.stepTip-box').fadeOut();
    $('.mask2').fadeOut();
 });
